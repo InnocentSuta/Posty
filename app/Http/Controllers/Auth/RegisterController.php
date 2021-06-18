@@ -36,7 +36,10 @@ class RegisterController extends Controller
 
         // Sign the user in 
 
-        auth()->attempt($request->only('email','password'));
+        
+        auth::attempt($request->only('email', 'password'));
+
+        //auth()::attempt($request->only('email','password'));
 
         // Redirect the user
 
