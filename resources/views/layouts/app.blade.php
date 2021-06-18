@@ -20,7 +20,7 @@
         <ul class="flex items-center">
             @auth
                 <li><a href=""class="p-3"> Innocent Suta</a></li>
-                <li><a href=""class="p-3"> Logout </a></li> 
+                <li><a href="{{route('logout')}}"class="p-3"> Logout </a></li> 
             @endauth
             @guest
                 <li><a href="{{route('login')}}" class="p-3"> Login </a></li>  
