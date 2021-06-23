@@ -12,6 +12,14 @@ class PostController extends Controller
     }
 
     public function store(Request $request){
-        dd('ok');
+        $this->validate($request, [
+        'body'=> 'required'
+        ]);
+        
+        $request->user()->posts()->create([
+            'body'=>$request->body
+        ]);
+        
+        return back();   
     }
 }
