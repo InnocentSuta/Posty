@@ -16,7 +16,10 @@ class PostLikeController extends Controller
         if ($post->likedBy($request->user())){
 
             return response(null, 409);
-        }else{
+
+        }
+        else
+        {
 
         $post->likes()->create([
 
